@@ -3,16 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-
   <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/stylish-portfolio.css" rel="stylesheet">
 
   <!-- Custom Fonts -->
   <link href="font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="favicon.ico" type="image/x-icon"> 
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
   <title>Твой дом</title>
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -155,29 +153,12 @@
       <div style="font-size: 30; margin-top: 40; margin-bottom: 20;">
         <h4>Наш офис</h4>
       </div>
-      <img src="img/office_place.jpg" alt="Фото месторасположения" width="600" class="img-rounded center-block">
+      <img src="img/office_place.jpg" alt="Фото месторасположения" class="img-rounded center-block">
     </div>
     </div>
     </div>
   </section>
 
-
-  <script type="text/javascript">
-    ymaps.ready(init);
-    function init(){
-      var map = new ymaps.Map("map", {
-        center: [55.740684, 37.618174],
-        zoom: 15
-      });
-      map.behaviors.disable('scrollZoom');
-      placemark = new ymaps.Placemark([55.740684, 37.618174], {
-        hintContent: 'Твой Дом',
-        balloonContentHeader: 'Твой Дом',
-        balloonContentBody: 'Москва, Старомонетный переулок, 10'
-      });
-      map.geoObjects.add(placemark);
-    }
-  </script>
 
   <!-- Footer -->
   <footer>
@@ -206,6 +187,23 @@
     </div>
   </footer>
 
+
+  <script type="text/javascript">
+    ymaps.ready(init);
+    function init(){
+      var map = new ymaps.Map("map", {
+        center: [55.740684, 37.618174],
+        zoom: 15
+      });
+      map.behaviors.disable('scrollZoom');
+      placemark = new ymaps.Placemark([55.740684, 37.618174], {
+        hintContent: 'Твой Дом',
+        balloonContentHeader: 'Твой Дом',
+        balloonContentBody: 'Москва, Старомонетный переулок, 10'
+      });
+      map.geoObjects.add(placemark);
+    }
+  </script>
 
   <!-- Custom Theme JavaScript -->
   <script>
@@ -238,7 +236,9 @@
       });
     });
   </script>
-
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </body>
 
 </html>
